@@ -6,6 +6,11 @@ import './Person.css'
 
 //nazwe props można zmienić. może być inna zmienna ale nazywa się ona props
 const person = (props) => {
+    const rnd = Math.random();
+
+    if (rnd > 0.7) {
+        throw new Error('Something went wrong');
+    }
 
     return (
         <div className={classes.Person}>
